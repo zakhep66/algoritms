@@ -1,9 +1,9 @@
 import time
 
-amount = 10000
-file = open("db"+str(amount)+".txt")
+amount = int(input('количесmво элементов: '))
+file = open('../генератор/' + str(amount) + ".txt", "r")
 arr=(file.read()).split(' ')
-# print(arr)
+
 for i in range(len(arr)): 
     arr[i] = int(arr[i]) # Перевод массива строк в массив чисел
 
@@ -37,8 +37,6 @@ def heapSort(arr):
 heapSort(arr)
 
 print("--- %s seconds ---" % (time.time() - start_time))
-
-print(arr)
 
 my_file = open("sort_heap{}.txt".format(amount), "w")
 for i in range(0,amount):

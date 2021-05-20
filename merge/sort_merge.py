@@ -1,10 +1,9 @@
 import time
 start_time = time.time()
 
-amount = 10
-file = open("db"+str(amount)+".txt")
+amount = int(input('количесmво элементов: '))
+file = open('../генератор/' + str(amount) + ".txt", "r")
 arr=(file.read()).split(' ')
-# print(arr)
 
 
 def mergeSort(arr):
@@ -43,8 +42,6 @@ def mergeSort(arr):
 mergeSort(arr)
 
 print("--- %s seconds ---" % (time.time() - start_time))
-
-# print(arr)
 
 my_file = open("sort_merge{}.txt".format(amount), "w")
 for i in range(0,amount):
