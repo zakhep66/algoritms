@@ -1,10 +1,9 @@
 import time
 start_time = time.time()
 
-amount = 10000
-file = open("db"+str(amount)+".txt")
+amount = int(input('количество элементов: '))
+file = open('../генератор/' + (str(amount))+".txt", "r")
 arr=(file.read()).split(' ')
-# print(arr)
 
 
 for i in range(1, len(arr)):
@@ -19,7 +18,6 @@ for i in range(1, len(arr)):
 
 print("--- %s seconds ---" % (time.time() - start_time))
 
-# print(arr)
 
 my_file = open("sort_insertion{}.txt".format(amount), "w")
 for i in range(0,amount):

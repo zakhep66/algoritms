@@ -1,10 +1,9 @@
 import time
 start_time = time.time()
 
-amount = 10000
-file = open("db"+str(amount)+".txt", "r")
+amount = int(input('количесmво элементов: '))
+file = open('../генератор/' + str(amount) + ".txt", "r")
 arr=(file.read()).split(' ')
-# print(arr)
 
 
 for i in range(amount-1):
@@ -16,8 +15,7 @@ for i in range(amount-1):
 print("--- %s seconds ---" % (time.time() - start_time))
 
 
-# print(arr)
-my_file = open("sort_buble{}.txt".format(amount), "w")
+my_file = open("sort_bubble{}.txt".format(amount), "w")
 for i in range(0,amount):
     my_file.write(arr[i]+" ")
 my_file.close

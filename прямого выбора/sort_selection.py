@@ -1,10 +1,9 @@
 import time
 start_time = time.time()
 
-amount = 10000
-file = open(str(amount)+".txt")
+amount = int(input('количество элементов: '))
+file = open('../генератор/' + (str(amount))+".txt", "r")
 arr=(file.read()).split(' ')
-# print(arr)
 
 for i in range(len(arr) - 1):
     m = i
@@ -18,7 +17,6 @@ for i in range(len(arr) - 1):
 
 print("--- %s seconds ---" % (time.time() - start_time))
 
-# print(arr)
 
 my_file = open("sort_selection{}.txt".format(amount), "w")
 for i in range(0,amount):
