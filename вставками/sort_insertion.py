@@ -1,10 +1,10 @@
 import time
+
 start_time = time.time()
 
 amount = int(input('количество элементов: '))
-file = open('../генератор/' + (str(amount))+".txt", "r")
-arr=(file.read()).split(' ')
-
+file = open('../генератор/' + (str(amount)) + ".txt", "r")
+arr = (file.read()).split(' ')
 
 for i in range(1, len(arr)):
     item_to_insert = int(arr[i])
@@ -18,8 +18,7 @@ for i in range(1, len(arr)):
 
 print("--- %s seconds ---" % (time.time() - start_time))
 
-
 my_file = open("sort_insertion{}.txt".format(amount), "w")
-for i in range(0,amount):
-    my_file.write(str(arr[i])+" ")
+for i in range(0, amount):
+    my_file.write(str(arr[i]) + " ")
 my_file.close
