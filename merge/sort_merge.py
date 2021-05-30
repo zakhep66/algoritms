@@ -1,10 +1,11 @@
 import time
-start_time = time.time()
+
 
 amount = int(input('количесmво элементов: '))
 file = open('../генератор/' + str(amount) + ".txt", "r")
-arr=(file.read()).split(' ')
+arr = (file.read()).split(' ')
 
+start_time = time.time()
 
 def mergeSort(arr):
     if len(arr) > 1:
